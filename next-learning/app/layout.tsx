@@ -16,7 +16,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='border-b flex justify-between px-10 py-4'>
+            <div  className='flex flex-col justify-center  font-serif text-2xl font-semibold cursor-pointer'>
+              IdeaVault
+            </div>
+
+            <div className='flex justify-center gap-20'>
+                <div className='flex border rounded-xl pr-2 pl-2 drop-shadow-sm shadow-sm flex-row text-sm font-semibold items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-7 pr-1">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 10.5v6m3-3H9m4.06-7.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
+                    </svg>
+                    New
+                  </div>
+                  <div  className='font-semibold cursor-pointer'>
+                      Logout
+                  </div>
+            </div>
+          </div>
+        
+        {children}
+      </body>
     </html>
   );
 }
